@@ -34,7 +34,7 @@ img {
   margin: 0 auto;
   padding: 0 16px;
 
-/*   outline: 2px solid red;
+  /*   outline: 2px solid red;
   outline-offset: -2px; */
 }
 
@@ -521,6 +521,7 @@ img {
 .team-list {
   min-width: 264px;
   display: flex;
+  justify-content: center;
   gap: 72px;
   padding: 0;
   flex-wrap: wrap;
@@ -532,16 +533,9 @@ img {
     gap: 64px 24px;
   }
 }
-@media only screen and (min-width: 1158px) {
-  .team-list {
-    gap: 24px;
-    min-width: 1128px;
-  }
-}
 
 .team-img {
   background-color: var(--hover-calor);
-  width: calc(100%);
   border-radius: 0px 0px 4px 4px;
   box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08),
     0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
@@ -703,7 +697,8 @@ img {
 /* FOOTER */
 .footer {
   background-color: var(--section-text-color);
-  display: flex;
+  padding-top: 96px;
+  padding-bottom: 96px;
 }
 
 @media only screen and (min-width: 1158px) {
@@ -716,9 +711,6 @@ img {
   display: flex;
   align-items: baseline;
   flex-direction: column;
-  width: 428px;
-  padding-top: 96px;
-  padding-bottom: 96px;
   margin: 0 auto;
 }
 
@@ -728,13 +720,11 @@ img {
     flex-wrap: wrap;
     gap: 72px 24px;
     flex-direction: row;
-    margin: 0 auto;
   }
 }
 @media only screen and (min-width: 1158px) {
   .footer-div {
     width: 1158px;
-    padding: 0 15px;
     gap: 0;
     flex-direction: row;
   }
@@ -753,7 +743,7 @@ img {
   justify-content: center;
 }
 
-@media only screen and (min-width: 1158px) {
+@media only screen and (min-width: 768px) {
   .logo-foot {
     display: inline-block;
     justify-content: left;
@@ -1132,7 +1122,7 @@ img {
   left: 50%;
   transform: translate(-50%, -50%) scale(1);
   width: 100vw;
-  height: 100vh;
+
   padding: 72px 24px 24px 24px;
   min-height: 576px;
   background: #fcfcfc;
@@ -1199,6 +1189,7 @@ img {
 .modal-form-ul {
   padding: 0;
   margin: 0;
+  margin-bottom: 16px;
 }
 .modal-form-li:not(:last-child) {
   display: block;
@@ -1261,7 +1252,6 @@ img {
   outline-offset: -1px;
   outline: transparent;
   padding: 8px 16px;
-  margin-bottom: 16px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1286,7 +1276,7 @@ img {
   border-radius: 2px;
   transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
   cursor: pointer;
-
+  flex-shrink: 0;
   background-position: center;
   background-repeat: no-repeat;
   background-image: url("data:image/svg+xml,%3Csvg width='10' height='8' viewBox='0 0 10 8' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M8.44558 0.255056C8.61838 0.089653 8.84834 -0.00178848 9.08693 2.65108e-05C9.32551 0.0018415 9.55407 0.0967713 9.72436 0.264784C9.89466 0.432797 9.99337 0.660752 9.99968 0.900549C10.006 1.14034 9.91939 1.37323 9.75816 1.55005L4.86357 7.70436C4.7794 7.79551 4.67782 7.86865 4.5649 7.91942C4.45198 7.97018 4.33003 7.99754 4.20636 7.99984C4.08268 8.00214 3.95981 7.97935 3.8451 7.93282C3.73038 7.88629 3.62618 7.81698 3.53872 7.72903L0.292827 4.46564C0.202435 4.38096 0.129933 4.27884 0.0796475 4.16537C0.0293621 4.05191 0.00232279 3.92942 0.000143182 3.80522C-0.00203643 3.68102 0.0206883 3.55765 0.0669613 3.44248C0.113234 3.3273 0.182108 3.22267 0.269473 3.13483C0.356838 3.047 0.460905 2.97775 0.575465 2.93123C0.690026 2.88471 0.812734 2.86186 0.936267 2.86405C1.0598 2.86624 1.18163 2.89343 1.29449 2.94398C1.40734 2.99454 1.50892 3.06743 1.59315 3.15831L4.16189 5.73967L8.42227 0.28219C8.42994 0.272694 8.43813 0.263635 8.4468 0.255056H8.44558Z' fill='%23ffffff'/%3E%3C/svg%3E%0A");
@@ -1324,11 +1314,10 @@ img {
   display: flex;
   align-items: center;
   justify-content: center;
-
+  background-color: transparent;
   margin: 0;
   margin-left: auto;
   padding: 0;
-  background-color: transparent;
   cursor: pointer;
   border: none;
   border-radius: 50%;
@@ -1374,6 +1363,8 @@ img {
   position: absolute;
   top: 16px;
   right: 16px;
+  background: #e7e9fc;
+  border: 1px solid rgba(46, 47, 66, 0.1);
 }
 .mobile-menu {
   padding: 0;
@@ -1435,7 +1426,8 @@ img {
   gap: 56px;
 }
 
-@media only screen and (min-width: minwidthpx) {
+@media only screen and (min-width: 320px) and (max-width: 428px) {
   .mobile-socials {
+    gap: 24px;
   }
 }
